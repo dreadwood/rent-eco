@@ -1,0 +1,8 @@
+include ../components/card-car
+
+mixin section-car-list({})
+  section.car-list
+    h2 Choose your car to start driving
+    include ../mocks/cars
+    each it in cars
+      +card-car({ ...it })
