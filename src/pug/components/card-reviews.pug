@@ -1,7 +1,7 @@
 include ../elements/images
 
-mixin card-reviews({ name, text })
-  article.card-reviews
+mixin card-reviews({ name, text, className })
+  article.card-reviews(class=className)
     h3.card-reviews__name=name
     .card-reviews__raiting
       +svg({ name: "star", width: 20, height: 20 })

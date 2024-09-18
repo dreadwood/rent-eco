@@ -5,11 +5,12 @@ mixin section-reviews({ className })
   section.section-reviews(class=className id=menuLinks[2].id)
     h2.section-reviews__title How it works
     include ../mocks/reviews
-    .section-reviews__list
-      each it in reviews
-        +card-reviews({ ...it })
+    .section-reviews__swiper.swiper
+      .section-reviews__list.swiper-wrapper
+        each it in reviews
+          +card-reviews({ ...it, className: "swiper-slide"  })
     .section-reviews__controls
-      button.section-reviews__btn
+      button.section-reviews__btn.section-reviews__btn--prev
         +svg({ name: "slider-arrow-left", width: 52, height: 52 })
-      button.section-reviews__btn
+      button.section-reviews__btn.section-reviews__btn--next
         +svg({ name: "slider-arrow-right", width: 52, height: 52 })

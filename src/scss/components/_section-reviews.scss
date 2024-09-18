@@ -32,27 +32,30 @@
     line-height: 48px;
   }
 }
+.section-reviews__swiper {
+  width: 100%;
+  margin-top: 16px;
+  @include breakpoint-lg {
+    margin-top: 24px;
+  }
+  @include breakpoint-xl {
+    margin-top: 32px;
+  }
+}
 .section-reviews__list {
   @include hide-scroll;
   display: flex;
-  gap: 8px;
-  margin-top: 16px;
   margin-right: -$padding;
   margin-left: -$padding;
   padding-right: $padding;
   padding-left: $padding;
-  overflow: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 8px;
   @include breakpoint-lg {
-    margin-top: 24px;
     margin-right: -$padding-lg;
     margin-left: -$padding-lg;
     padding-right: $padding-lg;
     padding-left: $padding-lg;
   }
   @include breakpoint-xl {
-    margin-top: 32px;
     margin-right: -$padding-xl;
     margin-left: -$padding-xl;
     padding-right: $padding-xl;
