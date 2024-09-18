@@ -1,0 +1,32 @@
+include ../components/card-stage
+
+mixin section-stages({ className })
+  include ../mocks/menu-links
+  section.section-stages(class=className id=menuLinks[1].id)
+    h2.section-stages__title How it works
+    p.section-stages__subtitle Renting made simple: choose, pick up, return
+    -
+      let stages = [
+        {
+          id: "1",
+          title: "Find your car",
+          text: "Enter your location, dates, and preferences to see the best options",
+          num: "01"
+        },
+        {
+          id: "2",
+          title: "Book your car",
+          text: "Reserve online and get instant confirmation",
+          num: "02"
+        },
+        {
+          id: "3",
+          title: "Pick Up Your Car",
+          text: "Head to the location and start driving right away",
+          img: "/img/works-bg@1x.jpg"
+        },
+      ]
+    .section-stages__grid
+      each it in stages
+        +card-stage({ ...it })
+

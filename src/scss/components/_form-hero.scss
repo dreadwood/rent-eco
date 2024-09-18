@@ -1,0 +1,96 @@
+.form-hero {
+  display: grid;
+  gap: 12px;
+  padding: 12px 12px 18px 12px;
+  text-align: left;
+  color: transparentize($color-black, 0.4);
+  background-color: transparentize($color-white, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  @include breakpoint-lg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 16px;
+  }
+  @include breakpoint-xl {
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+  }
+}
+.form-hero__el {
+  display: grid;
+  gap: 4px;
+}
+.form-hero__label {
+  font-size: 16px;
+  line-height: 19px;
+}
+.form-hero__field {
+  @include transition(border-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background-color: $color-white;
+  border: 1px solid transparentize($color-black, 0.9);
+  border-radius: 12px;
+  input {
+    display: block;
+    width: 100%;
+    padding: 0;
+    font-family: $font-default;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: $color-black;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    appearance: none;
+    &::placeholder {
+      font: inherit;
+      color: transparentize($color-dark-purple-blue, 0.4);
+    }
+  }
+  svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    fill: $color-black;
+  }
+  &:focus-within {
+    border-color: $color-moderate-aquamarine;
+  }
+  @include breakpoint-lg {
+    padding: 12px 15px;
+  }
+}
+.form-hero__btn {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 16px 30px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
+  border: 0;
+  border-radius: 64px;
+  &:hover,
+  &:focus-visible {
+    background-color: $color-green-jungle-crayola;
+  }
+  @include breakpoint-lg {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 304px;
+  }
+  @include breakpoint-xl {
+    grid-column: auto;
+    place-self: end auto;
+    max-width: none;
+  }
+}

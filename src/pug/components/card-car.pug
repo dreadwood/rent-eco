@@ -3,13 +3,15 @@ include ../elements/images
 mixin card-car({ name, img, priceDay, priceWeek, equipment })
   article.card-car
     .card-car__img
-      +picture({ image: img, width: 320, height: 226 })
-    .card-car__name=name
-    .card-car__price
-      .card-car__price-item=priceDay
-      .card-car__price-item=priceWeek
-    .card-car__equipment
-      each it in equipment
-        .card-car__equipment-item
-          +svg({ name: `equipment-${it}`, width: 20, height: 20 })
-    button.card-car__btn Book Now
+      +picture({ image: img, width: 611, height: 226 })
+    .card-car__content
+      h3.card-car__name=name
+      .card-car__price
+        .card-car__price-item #[span $#{priceDay}]/day
+        .card-car__price-item #[span $#{priceWeek}]/day
+      .card-car__equipment
+        each it in equipment
+          .card-car__equipment-item
+            +svg({ name: `equipment-${it.name}`, width: 20, height: 20 })
+            =it.value
+      button.card-car__btn.js-modal-book-open Book Now

@@ -1,0 +1,12 @@
+include ../elements/images
+
+mixin card-stage({ title, text, num, img })
+  article.card-stage(class=img && "card-stage--bg")
+    h3.card-stage__title=title 
+    p.card-stage__text=text
+    if num
+      .card-stage__num=num
+    if img
+      .card-stage__img
+        +picture2x({ image: img, width: 320, height: 247 })
+

@@ -1,2 +1,26 @@
-mixin header({})
-  header.header
+include ../elements/images
+
+mixin header({ className })
+  header.header(class=className)
+    include ../mocks/menu-links
+    include ../mocks/socials
+    .header__logo.js-header-logo
+      +svg({ name: "logo-header", width: 205, height: 26 })
+    .header__menu.js-header-menu
+      button.header__close.js-header-close
+        +svg({ name: "cross", width: 15, height: 15 })
+      nav.header__nav
+        ul.header__list 
+          each it in menuLinks
+            li #[a.header__link.js-header-link(href=`#${it.id}`)=it.text]
+      .header__contact
+        a.header__tel.js-header-tel(href="tel:+3479885988") 
+          +svg({ name: "header-call", width: 22, height: 22 })
+          | +347-988-5988
+        a.header__btn.js-header-contact(href=`#${menuLinks[3].id}`) Submit a request
+      .header__socials
+        each it in socials
+          a.header__socials-link.js-header-social(href=it.href aril-label=it.label)
+            +svg({ name: it.icon, width: 40, height: 40 })
+    button.header__burger.js-header-burger(onclick="this.classList.toggle('actv')")
+      +svg({ name: "burger", width: 18, height: 13 })

@@ -1,0 +1,13 @@
+include ../components/form-contact
+include ../elements/images
+
+mixin section-form({ className })
+  include ../mocks/menu-links
+  section.section-form(class=className id=menuLinks[3].id)
+    .section-form__bg
+      +picture({ image: "/img/form-bg.jpg", width: 320, height: 247 }) 
+    .section-form__wrp
+      .section-form__text
+        h2.section-form__title Don't know which car to choose?
+        p.section-form__subtitle Leave us a request and a booking assistant will reach out and help.
+      +form-contact({ classNmae: "section-form__form"})

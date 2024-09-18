@@ -1,0 +1,41 @@
+.card-reviews {
+  flex-shrink: 0;
+  width: 244px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 21px;
+  background-color: $color-white;
+  border-radius: 20px;
+  @include breakpoint-lg {
+    width: 400px;
+    padding: 24px;
+    font-size: 18px;
+    line-height: 23px;
+    border-radius: 30px;
+  }
+  @include breakpoint-xl {
+    width: 450px;
+  }
+}
+.card-reviews__name {
+  margin: 0;
+  font-weight: 500;
+  @include breakpoint-lg {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+.card-reviews__raiting {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  @include breakpoint-lg {
+    margin-bottom: 27px;
+  }
+}

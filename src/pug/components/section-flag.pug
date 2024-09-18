@@ -1,0 +1,40 @@
+include ../elements/images
+
+mixin section-flag({ className })
+  section.section-flag(class=className)
+    -
+      let languages = [
+        {
+          flag: "flag-ru",
+          text: "Мы говорим на русском языке"
+        },
+        {
+          flag: "flag-us",
+          text: "We speak English "
+        },
+        {
+          flag: "flag-tj",
+          text: "Мо бо забони тоҷикӣ ҳарф мезанем"
+        },
+        {
+          flag: "flag-az",
+          text: "Azərbaycan dilində danışırıq"
+        },
+        {
+          flag: "flag-ua",
+          text: "Ми говоримо українською мовою"
+        },
+        {
+          flag: "flag-uz",
+          text: "Biz o'zbek tilida gaplashamiz"
+        },
+        {
+          flag: "flag-kz",
+          text: "Біз қазақ тілінде сөйлейміз"
+        },
+      ]
+    .section-flag__list
+      each it in languages
+        .section-flag__item 
+          +svg({ name: it.flag, width: 24, height: 24 })
+          =it.text

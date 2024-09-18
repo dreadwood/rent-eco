@@ -88,5 +88,28 @@ window.utils = {
       }
     })
     btn.blur()
+  },
+
+  /**
+   * @param {HTMLFormElement} form
+   */
+  serializeForm(form) {
+    return new FormData(form).entries().reduce((acc, it) => {
+      acc[it[0]] = it[1]
+      return acc
+    }, {})
+  },
+
+  /**
+   * @param {JSON} data
+   * @param {String} url
+   * @return {Promise<Response>}
+   */
+  async sendData(data, url) {
+    return await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      mode: 'no-cors'
+    })
   }
 }

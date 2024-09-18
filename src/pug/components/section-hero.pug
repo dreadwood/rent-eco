@@ -1,0 +1,10 @@
+include ../components/form-hero
+include ../elements/images
+
+mixin section-hero({ className })
+  section.section-hero(class=className)
+    .section-hero__bg
+      +picture({ image: "/img/hero-bg.jpg", width: 320, height: 247 })
+    h1.section-hero__title Rent cars for less
+    p.section-hero__subtitle Get affordable and eco-friendly car rentals nationwide
+    +form-hero({ className: "section-hero__form" })

@@ -1,0 +1,90 @@
+.section-form {
+  position: relative;
+  color: $color-white;
+  background-color: $color-black;
+}
+.section-form__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($color-very-dark-bluish-green, 0.3);
+
+  }
+}
+.section-form__wrp {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(334px, 535px);
+  justify-content: center;
+  gap: 24px;
+  max-width: $breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 47px $padding 51px $padding;
+  @include breakpoint-lg {
+    grid-template-columns: 1fr 54%;
+    gap: 30px;
+    padding: 70px $padding-lg;
+  }
+  @include breakpoint-xl {
+    grid-template-columns: 1fr 535px;
+    padding: 86px $padding-xl 96px $padding-xl;
+  }
+  @include breakpoint-xxl {
+    padding-right: $padding-xxl;
+    padding-left: $padding-xxl;
+  }
+}
+.section-form__text {
+  text-align: center;
+  @include breakpoint-lg {
+    text-align: left;
+  }
+}
+.section-form__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+  @include breakpoint-lg {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  @include breakpoint-xl {
+    font-size: 48px;
+    line-height: 53px;
+  }
+}
+.section-form__subtitle {
+  margin: 0;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 21px;
+  @include breakpoint-lg {
+    margin-top: 16px;
+  }
+  @include breakpoint-xl {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.section-form__form {
+
+}

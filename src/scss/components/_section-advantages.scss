@@ -1,0 +1,44 @@
+.section-advantages {
+  max-width: $breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 $padding;
+  @include breakpoint-lg {
+    padding: 0 $padding-lg;
+  }
+  @include breakpoint-xl {
+    padding: 0 $padding-xl;
+  }
+  @include breakpoint-xxl {
+    padding: 0 $padding-xxl;
+  }
+}
+.section-advantages__title {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+  text-align: center;
+  @include breakpoint-lg {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  @include breakpoint-xl {
+    font-size: 44px;
+    line-height: 48px;
+  }
+}
+.section-advantages__grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  @include breakpoint-md {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include breakpoint-lg {
+    margin-top: 24px;
+  }
+  @include breakpoint-xl {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 32px;
+  }
+}

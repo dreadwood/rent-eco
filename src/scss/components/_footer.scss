@@ -1,0 +1,143 @@
+.footer {
+  color: $color-gray-839;
+  background-color: $color-black;
+}
+.footer__wrp {
+  max-width: $breakpoint-xxl;
+  margin: 0 auto;
+  padding: 32px $padding;
+  background-color: $color-black;
+  @include breakpoint-lg {
+    padding-right: $padding-lg;
+    padding-left: $padding-lg;
+  }
+  @include breakpoint-xl {
+    padding-right: $padding-xl;
+    padding-left: $padding-xl;
+  }
+  @include breakpoint-xxl {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.footer__content {
+  display: grid;
+  gap: 47px;
+  @include breakpoint-lg {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+.footer__left {
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer__logo {
+  width: 276px;
+  height: 35px;
+  margin-bottom: 20px;
+  color: $color-white;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentcolor;
+  }
+  @include breakpoint-lg {
+    width: 269px;
+    height: 34px;
+    margin-bottom: 26px;
+  }
+  @include breakpoint-xl {
+    width: 328px;
+    height: 42px;
+    margin-bottom: 32px;
+  }
+}
+.footer__cols {
+  // display: grid;
+  // grid-template-columns: repeat(2, auto);
+  // justify-content: space-between
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  @include breakpoint-lg {
+    // grid-template-columns: repeat(3, auto);
+    gap: 50px;
+  }
+  @include breakpoint-xl {
+    gap: 100px;
+  }
+}
+.footer__cols-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  color: $color-white;
+  @include breakpoint-lg {
+    margin-bottom: 32px;
+  }
+}
+.footer__link-list {
+  @include list-reset;
+  display: grid;
+  gap: 16px;
+}
+.footer__link {
+  @include transition(color);
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  &:hover,
+  &:focus-visible {
+    color: $color-white;
+  }
+}
+.footer__link-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    stroke: $color-gray-839;
+  }
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer__socials-link {
+  @include transition(color);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: $color-black;
+  background-color: $color-white;
+  border-radius: 50%;
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: currentcolor;
+  }
+  &:hover,
+  &:focus-visible {
+    color: $color-moderate-aquamarine;
+  }
+}
+.footer__copyright {
+  margin-top: 67px;
+  padding-top: 30px;
+  font-size: 12px;
+  line-height: 18px;
+  border-top: 1px solid $color-gray-341;
+  @include breakpoint-lg {
+    margin-top: 80px;
+  }
+}

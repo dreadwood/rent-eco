@@ -1,0 +1,264 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: $breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px $padding;
+  @include breakpoint-lg {
+    padding: 24px $padding-lg;
+  }
+  @include breakpoint-xl {
+    gap: 20px;
+    padding: 28px $padding-xl;
+  }
+  @include breakpoint-xxl {
+    gap: 40px;
+    padding-right: $padding-xxl;
+    padding-left: $padding-xxl;
+  }
+}
+.header__logo {
+  @include transition(color);
+  position: relative;
+  flex-shrink: 0;
+  width: 205px;
+  height: 26px;
+  color: $color-white;
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentcolor;
+  }
+  &.black {
+    z-index: 11;
+    color: $color-black;
+  }
+}
+.header__menu {
+  @include transition(transform);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 82px 16px 24px 16px;
+  background-color: $color-white;
+  border-radius: 0 0 20px 20px;
+  transform: translateY(-100%);
+  &.show {
+    transform: translateY(0);
+  }
+  @include breakpoint-lg {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+  }
+  @include breakpoint-xl {
+    @include transition(none);
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    transform: none;
+  }
+}
+.header__close {
+  @include transition(color);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  color: $color-gray-188;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentcolor;
+  }
+  &:hover,
+  &:focus-visible {
+    color: $color-green-jungle-crayola;
+  }
+  @include breakpoint-lg {
+    top: 24px;
+    right: 20px;
+  }
+  @include breakpoint-xl {
+    display: none;
+  }
+}
+.header__nav {
+  @include breakpoint-lg {
+    grid-row: 1 / 3;
+  }
+}
+.header__list {
+  @include list-reset;
+  display: grid;
+  gap: 30px;
+  @include breakpoint-xl {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+.header__link {
+  @include transition(color);
+  display: block;
+  width: max-content;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-gray-188;
+  &:hover,
+  &:focus-visible {
+    color: $color-green-jungle-crayola;
+  }
+  @include breakpoint-xl {
+    color: $color-white;
+  }
+}
+.header__contact {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+  @include breakpoint-lg {
+    gap: 16px;
+    margin-top: 0;
+  }
+  @include breakpoint-xl {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+  }
+}
+.header__tel {
+  @include transition(color);
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-gray-188;
+  svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    fill: currentcolor;
+  }
+  &:hover,
+  &:focus-visible {
+    color: $color-green-jungle-crayola;
+  }
+  @include breakpoint-xl {
+    color: $color-white;
+  }
+  @include breakpoint-xxl {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.header__btn {
+  @include transition(background-color);
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0;
+  padding: 13px 20px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
+  border: 0;
+  border-radius: 38px;
+  &:hover,
+  &:focus-visible {
+    background-color: $color-green-jungle-crayola;
+  }
+  @include breakpoint-lg {
+    max-width: 178px;
+  }
+}
+.header__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  @include breakpoint-lg {
+    grid-column: 2 / 3;
+    justify-content: center;
+    margin-top: 0;
+  }
+  @include breakpoint-xl {
+    display: none;
+  }
+}
+.header__socials-link {
+  @include transition(background-color);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
+  border-radius: 50%;
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: currentcolor;
+  }
+  &:hover,
+  &:focus-visible {
+    background-color: $color-green-jungle-crayola;
+  }
+}
+.header__burger {
+  @include transition(background-color);
+  position: relative;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  color: $color-moderate-aquamarine;
+  background-color: $color-white;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+  svg {
+    width: 18px;
+    height: 13px;
+    stroke: currentcolor;
+  }
+  &:hover,
+  &:focus-visible {
+    color: $color-white;
+    background-color: $color-moderate-aquamarine;
+  }
+  @include breakpoint-xl {
+    display: none;
+  }
+}

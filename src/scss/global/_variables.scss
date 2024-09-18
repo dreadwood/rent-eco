@@ -7,10 +7,10 @@ $retina-dppx: 1.5dppx;
 
 // container
 $container-max: 1440px;
-$container-min: 375px;
+$container-min: 360px;
 
 // breakpoints
-$breakpoint-sm: 360px;
+$breakpoint-sm: $container-min;
 $breakpoint-md: 576px;
 $breakpoint-lg: 768px;
 $breakpoint-xl: 1024px;
@@ -21,4 +21,5 @@ $padding: 16px;
 $padding-sm: 16px;
 $padding-md: 16px;
 $padding-lg: 20px;
-$padding-xl: 80px;
+$padding-xl: 20px;
+$padding-xxl: 80px;

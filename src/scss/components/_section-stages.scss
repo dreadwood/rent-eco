@@ -1,0 +1,55 @@
+.section-stages {
+  max-width: $breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 $padding;
+  @include breakpoint-lg {
+    padding: 0 $padding-lg;
+  }
+  @include breakpoint-xl {
+    padding: 0 $padding-xl;
+  }
+  @include breakpoint-xxl {
+    padding: 0 $padding-xxl;
+  }
+}
+.section-stages__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 600;
+  text-align: center;
+  @include breakpoint-lg {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  @include breakpoint-xl {
+    font-size: 44px;
+    line-height: 48px;
+  }
+}
+.section-stages__subtitle {
+  margin: 0;
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  @include breakpoint-lg {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.section-stages__grid {
+  display: grid;
+  gap: 13px;
+  margin-top: 16px;
+  @include breakpoint-md {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+  @include breakpoint-xl {
+    gap: 16px;
+    margin-top: 32px;
+  }
+}

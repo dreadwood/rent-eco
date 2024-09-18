@@ -5,6 +5,7 @@
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   position: relative;
@@ -16,13 +17,13 @@ body {
   padding: 0;
   font-family: $font-default;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 21px;
   font-weight: 400;
   font-style: normal;
   text-align: left;
-  color: $color-black;
+  color: $color-gray-102;
   word-break: break-word;
-  background-color: $color-white;
+  background-color: $color-periwinkle-crayola;
 }
 main {
   flex-grow: 1;
@@ -39,5 +40,8 @@ svg {
   max-width: 100%;
 }
 button {
-  cursor: pointer;
+  font: inherit;
+  &:not([disabled]) {
+    cursor: pointer;
+  }
 }

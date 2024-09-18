@@ -1,0 +1,77 @@
+.card-advantages {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+  &--image {
+    height: 220px;
+  }
+  &--text {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 12px;
+    padding: 33px 12px;
+    background-color: $color-white;
+  }
+  &--button {
+    margin-top: 12px;
+  }
+  @include breakpoint-md {
+    &--button {
+      display: grid;
+      place-items: center;
+      margin-top: 0;
+      padding: 7px;
+      background-color: $color-white;
+    }
+  }
+  @include breakpoint-lg {
+    &--image {
+      height: 225px;
+    }
+    &--text {
+      padding: 20px 12px;
+    }
+  }
+}
+.card-advantages__img {
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.card-advantages__title {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+  color: $color-green-jungle-crayola;
+}
+.card-advantages__text {
+  font-size: 18px;
+  line-height: 23px;
+}
+.card-advantages__btn {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 9px 24px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
+  border: 0;
+  border-radius: 38px;
+  &:hover,
+  &:focus-visible {
+    background-color: $color-green-jungle-crayola;
+  }
+  @include breakpoint-md {
+    max-width: 223px;
+    padding: 13px 24px;
+  }
+}

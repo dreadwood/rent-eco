@@ -1,2 +1,47 @@
+include ../elements/images
+
 mixin footer({})
-  footer.header
+  footer.footer
+    include ../mocks/menu-links
+    include ../mocks/socials
+    -
+      let contacts = [
+        {
+          icon: "contact-point",
+          text: "6921 8TH AVE, <br> BROOKLYN, NY 11228"
+        },
+        {
+          icon: "contact-call",
+          text: "+347-988-5988 <br> +929-655-0006"
+        },
+      ]
+    .footer__wrp
+      .footer__content
+        .footer__left
+          .footer__logo 
+            +svg({ name: "logo-header", width: 276, height: 35 })
+          | Rent cars for less
+        .footer__cols
+          .footer__cols-item
+            .footer__cols-title Menu
+            ul.footer__link-list
+              each it in menuLinks
+                li #[a.footer__link(href=`#${it.id}`)=it.text]
+          .footer__cols-item
+            .footer__cols-title Contacts
+            .footer__link-list
+              .footer__link-group
+                +svg({ name: "contact-point", width: 24, height: 24 })
+                a.footer__link(href="#") 6921 8TH AVE, #[br] BROOKLYN, NY 11228
+              .footer__link-group
+                +svg({ name: "contact-call", width: 24, height: 24 })
+                div
+                  a.footer__link(href="tel:+3479885988") +347-988-5988
+                  a.footer__link(href="tel:+3479885988") +929-655-0006
+          .footer__cols-item
+            .footer__cols-title Follow Us
+            .footer__socials
+              each it in socials
+                a.footer__socials-link(href=it.href aril-label=it.label)
+                  +svg({ name: it.icon, width: 22, height: 22 })
+      .footer__copyright Copyright #{(new Date).getFullYear()} ・ RentEco, All Rights Reserved

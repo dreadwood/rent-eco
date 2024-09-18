@@ -1,0 +1,17 @@
+include ../elements/images
+
+mixin field-file({ name, label, className })
+  .field-file(class=className)
+    div
+      .field-file__label=label
+      label.field-file__area
+        input.visually-hidden(type="file" name=name)
+        .field-file__empty
+          .field-file__msg Document must be fully visible. #[br] All text must be clear
+          .field-file__upload
+            +svg({ name: "upload", width: 20, height: 20 })
+            | Upload
+    div
+      .field-file__example-label Example
+      .field-file__example
+        +picture({ image: "/img/license-front.jpg", width: 90, height: 57 })

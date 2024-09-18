@@ -1,6 +1,6 @@
 {
   "extends": ["stylelint-config-standard-scss", "./.stylelint-order.json"],
-  "plugins": ["stylelint-order"],
+  "plugins": ["stylelint-prettier", "stylelint-order"],
   "overrides": [
     {
       "files": ["**/*.scss"],

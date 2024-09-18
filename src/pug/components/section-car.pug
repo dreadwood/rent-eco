@@ -1,0 +1,10 @@
+include ../components/card-car
+
+mixin section-car({ className })
+  include ../mocks/menu-links
+  section.section-car(class=className id=menuLinks[0].id)
+    h2.section-car__title Choose your car to start driving
+    include ../mocks/cars
+    .section-car__grid
+      each it in cars
+        +card-car({ ...it })

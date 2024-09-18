@@ -1,0 +1,119 @@
+.card-car {
+  overflow: hidden;
+  background-color: $color-white;
+  border-radius: 15px;
+  @include breakpoint-xl {
+    border-radius: 18px;
+  }
+}
+.card-car__img {
+  width: 100%;
+  height: 226px;
+  overflow: hidden;
+  border-radius:0 0 16px 16px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  @include breakpoint-xl {
+    border-radius: 0 0 18px 18px;
+  }
+}
+.card-car__content {
+  padding: 12px 12px 20px 12px;
+  @include breakpoint-xl {
+    padding: 16px;
+  }
+}
+.card-car__name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  @include breakpoint-xl {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.card-car__price {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.card-car__price-item {
+  font-size: 16px;
+  line-height: 19px;
+  color: transparentize($color-gray-102, 0.5);
+  span {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $color-gray-102;
+  }
+  &:not(:last-child) {
+    padding-right: 12px;
+    border-right: 1px solid transparentize($color-black, 0.9);
+  }
+  &:not(:first-child) {
+    padding-left: 12px;
+  }
+}
+.card-car__equipment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: $color-periwinkle-crayola;
+  border-radius: 16px;
+}
+.card-car__equipment-item {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: 56px;
+  min-height: 44px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  opacity: 0.7;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  @include breakpoint-xl {
+    min-height: 47px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.card-car__btn {
+  @include transition(color, background-color);
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-top: 13px;
+  padding: 9px 19px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparentize($color-gray-102, 0.4);
+  border-radius: 27px;
+  &:hover,
+  &:focus-visible {
+    color: $color-white;
+    background-color: $color-moderate-aquamarine;
+    border-color: $color-moderate-aquamarine;
+  }
+  @include breakpoint-xl {
+    margin-top: 20px;
+    padding: 11px 23px;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 32px;
+  }
+}

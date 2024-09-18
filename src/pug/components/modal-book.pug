@@ -1,0 +1,84 @@
+include ../components/field-file
+
+mixin modal-book({ className })
+  .modal-book.js-modal-book(class=className)
+    -
+      let modalFields = [
+        {
+          label: "First Name*",
+          placeholder: "Enter driver’s first name",
+          type: "text",
+          name: "name",
+          id: "book_name"
+        },
+        {
+          label: "Last Name*",
+          placeholder: "Enter driver’s first name",
+          type: "text",
+          name: "last_name",
+          id: "book_last_name"
+        },
+        {
+          label: "Phone number*",
+          placeholder: "Enter driver’s phone number",
+          type: "tel",
+          name: "phone",
+          id: "book_phone"
+        },
+        {
+          label: "Emergency phone number",
+          placeholder: "Enter driver’s emergency number",
+          type: "phone",
+          name: "emergency_phone",
+          id: "book_emergency_phone"
+        },
+        {
+          label: "License number*",
+          placeholder: "Enter driver’s license number",
+          type: "text",
+          name: "license",
+          id: "book_license"
+        },
+        {
+          label: "License number*",
+          placeholder: "Enter driver’s license number",
+          type: "text",
+          name: "license",
+          id: "book_license"
+        },
+        {
+          label: "Address*",
+          placeholder: "Enter driver’s address",
+          type: "text",
+          name: "address",
+          id: "book_license"
+        },
+        {
+          label: "Email*",
+          placeholder: "Enter driver’s email",
+          type: "text",
+          name: "email",
+          id: "book_license"
+        },
+      ]
+    .modal-book__dialog
+      h2.modal-book__title Book Now
+      p.modal-book__subtitle Enter the driver's details to finish booking
+      form.modal-book__form.js-modal-book-form(method="post" action="https://webhook.site/a8cba197-e1d8-474c-a6ee-774f6994b29a")
+        fieldset.modal-book__group
+          each it in modalFields.slice(0, 4)
+            .modal-book__el 
+              label.modal-book__label(for=it.id)=it.label 
+              input.modal-book__field(id=it.id name=it.name value=it.value placeholder=it.placeholder)
+        fieldset.modal-book__files
+          legend.modal-book__files-label Driver’s License
+          +field-file({ name: "license_photo_front", label: "Front side" })
+          +field-file({ name: "license_photo_back", label: "Back side" })
+        fieldset.modal-book__group
+          each it in modalFields.slice(4, 7)
+            .modal-book__el 
+              label.modal-book__label(for=it.id)=it.label 
+              input.modal-book__field(id=it.id name=it.name value=it.value placeholder=it.placeholder)
+        .modal-book__controls
+          button.modal-book__btn.ghost.js-modal-book-close(type="button") Cancel
+          button.modal-book__btn.js-modal-book-submit(type="button") Submit

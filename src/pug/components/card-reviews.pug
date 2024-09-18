@@ -1,0 +1,12 @@
+include ../elements/images
+
+mixin card-reviews({ name, text })
+  article.card-reviews
+    h3.card-reviews__name=name
+    .card-reviews__raiting
+      +svg({ name: "star", width: 20, height: 20 })
+      +svg({ name: "star", width: 20, height: 20 })
+      +svg({ name: "star", width: 20, height: 20 })
+      +svg({ name: "star", width: 20, height: 20 })
+      +svg({ name: "star", width: 20, height: 20 })
+    =text

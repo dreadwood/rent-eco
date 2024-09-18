@@ -1,0 +1,15 @@
+include ../components/card-reviews
+
+mixin section-reviews({ className })
+  include ../mocks/menu-links
+  section.section-reviews(class=className id=menuLinks[2].id)
+    h2.section-reviews__title How it works
+    include ../mocks/reviews
+    .section-reviews__list
+      each it in reviews
+        +card-reviews({ ...it })
+    .section-reviews__controls
+      button.section-reviews__btn
+        +svg({ name: "slider-arrow-left", width: 52, height: 52 })
+      button.section-reviews__btn
+        +svg({ name: "slider-arrow-right", width: 52, height: 52 })

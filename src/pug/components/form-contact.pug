@@ -1,0 +1,9 @@
+mixin form-contact({ className })
+  form.form-contact.js-contact-form(class=className method="post" action="https://webhook.site/a8cba197-e1d8-474c-a6ee-774f6994b29a")
+    label.visually-hidden(for="contact_name") Your Name
+    input.form-contact__field(type="text" id="contact_name" name="name" placeholder="Your Name*" required)
+    label.visually-hidden(for="contact_tel") Phone
+    input.form-contact__field(type="tel" id="contact_tel" name="tel" placeholder="Phone*" required)
+    label.visually-hidden(for="contact_message") Your message
+    textarea.form-contact__textarea(id="contact_message" name="message" placeholder="Your message")
+    button.form-contact__btn.js-contact-btn(type="submit") Send

@@ -1,0 +1,40 @@
+.section-car {
+  max-width: $breakpoint-xxl;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 $padding;
+  @include breakpoint-lg {
+    padding: 0 $padding-lg;
+  }
+  @include breakpoint-xl {
+    padding: 0 $padding-xl;
+  }
+}
+.section-car__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 600;
+  text-align: center;
+  @include breakpoint-lg {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @include breakpoint-xl {
+    font-size: 44px;
+    line-height: 53px;
+  }
+}
+.section-car__grid {
+  display: grid;
+  gap: 13px;
+  max-width: 1098px;
+  margin: 24px auto 0 auto;
+  @include breakpoint-md {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+  }
+  @include breakpoint-xl {
+    margin-top: 32px;
+  }
+}

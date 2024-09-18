@@ -1,0 +1,79 @@
+.field-file {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+.field-file__label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $color-gray-067;
+}
+.field-file__area {
+  display: grid;
+  place-items: center;
+  height: 94px;
+  border: 1px dashed $color-moderate-aquamarine;
+  border-radius: 8px;
+  &:hover,
+  &:focus-within {
+    border-style: solid;
+  }
+}
+.field-file__empty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.field-file__msg {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: transparentize($color-gray-067, 0.4);
+}
+.field-file__upload {
+  @include transition(background-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  margin: 0;
+  padding: 5px 16px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $color-white;
+  }
+  &:hover,
+  &:focus-visible {
+    background-color: $color-green-jungle-crayola;
+  }
+}
+.field-file__example-label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 17px;
+  color: transparentize($color-gray-067, 0.4);
+}
+.field-file__example {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 94px;
+  padding: 3px;
+  background-color: transparentize($color-moderate-aquamarine, 0.9);
+  border: 1px solid $color-moderate-aquamarine;
+  border-radius: 8px;
+  img {
+    border-radius: 5px;
+  }
+}

@@ -1,9 +1,27 @@
 extends ../elements/layout-page
-include ../components/section-car-list
+include ../components/section-hero
+include ../components/section-flag
+include ../components/section-car
+include ../components/section-stages
+include ../components/section-advantages
+include ../components/section-reviews
+include ../components/section-form
+include ../components/overlay
+include ../components/modal-book
 
 block data
   - title = "Template"
 
 
 block content
-  +section-car-list({})
+  +section-hero({})
+  +section-flag({ className: "page-main__flag" })
+  +section-car({ className: "page-main__car" })
+  +section-stages({ className: "page-main__stages" })
+  +section-advantages({ className: "page-main__advantages" })
+  +section-reviews({ className: "page-main__reviews" })
+  +section-form({ className: "page-main__form" })
+
+block modal 
+  +overlay({})
+  +modal-book({})

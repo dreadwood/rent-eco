@@ -1,0 +1,48 @@
+.section-flag {
+  @include hide-scroll;
+  overflow: scroll;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
+}
+.section-flag__list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px;
+  @include breakpoint-lg {
+    gap: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  @include breakpoint-xl {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+.section-flag__item {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  @include breakpoint-lg {
+    font-size: 18px;
+    line-height: 20px;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  @include breakpoint-xl {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}

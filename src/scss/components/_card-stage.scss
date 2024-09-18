@@ -1,0 +1,71 @@
+.card-stage {
+  position: relative;
+  min-height: 220px;
+  padding: 24px;
+  overflow: hidden;
+  background-color: $color-white;
+  border-radius: 30px;
+  &--bg {
+    color: $color-white;
+    background-color: $color-black;
+  }
+  @include breakpoint-lg {
+    min-height: 248px;
+  }
+  @include breakpoint-xl {
+    min-height: 320px;
+    padding: 40px 30px;
+    border-radius: 60px;
+  }
+}
+.card-stage__title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  @include breakpoint-xl {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.card-stage__text {
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 21px;
+  @include breakpoint-xl {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+.card-stage__num {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  font-size: 69px;
+  line-height: 83px;
+  font-weight: 800;
+  color: $color-moderate-aquamarine;
+  opacity: 0.3;
+  @include breakpoint-xl {
+    right: 20px;
+    font-size: 90px;
+    line-height: 108px;
+  }
+}
+.card-stage__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right bottom;
+  }
+}

@@ -1,0 +1,55 @@
+include ../elements/images
+
+mixin form-hero({ className })
+  form.form-hero(class=className method="post" action="#")
+    -
+      let heroFields = [
+        {
+          id: "1",
+          inputId: "hero_pick_up_date",
+          name: "pick_up_date",
+          label: "Pick-up date",
+          icon: "form-calendar",
+          placeholder: "Add dates",
+          value: "01/08/2024"
+        },
+        {
+          id: "2",
+          inputId: "hero_pick_up_time",
+          name: "pick_up_time",
+          label: "Pick-up time",
+          icon: "form-clock",
+          placeholder: "Add Time",
+          value: "12:00"
+        },
+        {
+          id: "3",
+          inputId: "hero_drop_off_date",
+          name: "drop_off_date",
+          label: "Drop-off date",
+          icon: "form-calendar",
+          placeholder: "Add dates"
+        },
+        {
+          id: "4",
+          inputId: "hero_drop_off_time",
+          name: "drop_off_time",
+          label: "Drop-off time",
+          icon: "form-clock",
+          placeholder: "Add Time"
+        },
+      ]
+    each it in heroFields 
+      .form-hero__el
+        .form-hero__label(for=it.inputId)=it.label
+        .form-hero__field
+          +svg({ name: it.icon, width: 20, height: 20 })
+          input(
+            type="text" 
+            id=it.inputId 
+            name=it.name 
+            placeholder=it.placeholder 
+            value=it.value
+            required 
+          )
+    button.form-hero__btn(type="submit") Find Your Car
