@@ -7,11 +7,10 @@
 .section-flag__list {
   display: flex;
   align-items: center;
-  // gap: 16px;
   padding: 10px;
+  /* stylelint-disable-next-line declaration-no-important */
   transition-timing-function: linear !important;
   @include breakpoint-lg {
-    // gap: 24px;
     padding-top: 8px;
     padding-bottom: 8px;
   }
