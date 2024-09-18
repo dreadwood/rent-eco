@@ -1,15 +1,11 @@
 .section-flag {
-  @include hide-scroll;
-  overflow: scroll;
-  color: $color-white;
-  background-color: $color-moderate-aquamarine;
-}
-.section-flag__list {
   display: flex;
   align-items: center;
-  padding: 10px;
-  /* stylelint-disable-next-line declaration-no-important */
-  transition-timing-function: linear !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  color: $color-white;
+  background-color: $color-moderate-aquamarine;
   @include breakpoint-lg {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -17,6 +13,18 @@
   @include breakpoint-xl {
     padding-top: 11px;
     padding-bottom: 11px;
+  }
+}
+.section-flag__list {
+  display: flex;
+  align-items: center;
+  &--1 {
+    animation: running-line1 20s infinite linear;
+    animation-delay: -20s;
+  }
+  &--2 {
+    animation: running-line2 20s infinite linear;
+    animation-delay: -10s;
   }
 }
 .section-flag__item {
@@ -47,5 +55,23 @@
   @include breakpoint-xl {
     font-size: 20px;
     line-height: 22px;
+  }
+}
+
+@keyframes running-line1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes running-line2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }

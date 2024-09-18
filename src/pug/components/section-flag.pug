@@ -33,9 +33,14 @@ mixin section-flag({ className })
           text: "Біз қазақ тілінде сөйлейміз"
         },
       ]
-    .section-flag__swiper.swiper
-      .section-flag__list.swiper-wrapper
-        each it in [...languages, ...languages]
-          .section-flag__item.swiper-slide
+    each line in ["section-flag__list--1", "section-flag__list--2"]
+      .section-flag__list(class=line)
+        each it in languages
+          .section-flag__item
             +svg({ name: it.flag, width: 24, height: 24 })
             =it.text
+    //- .section-flag__list.section-flag__list--2
+      each it in languages
+        .section-flag__item
+          +svg({ name: it.flag, width: 24, height: 24 })
+          =it.text
