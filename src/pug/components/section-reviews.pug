@@ -8,7 +8,7 @@ mixin section-reviews({ className })
     .section-reviews__swiper.swiper
       .section-reviews__list.swiper-wrapper
         each it in reviews
-          +card-reviews({ ...it, className: "swiper-slide"  })
+          +card-reviews({ ...it, className: "swiper-slide" })
     .section-reviews__controls
       button.section-reviews__btn.section-reviews__btn--prev
         +svg({ name: "slider-arrow-left", width: 52, height: 52 })

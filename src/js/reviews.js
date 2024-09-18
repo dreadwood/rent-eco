@@ -1,10 +1,9 @@
 ;(() => {
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded')
-
     const swiper = new Swiper('.section-reviews__swiper', {
       spaceBetween: 8,
       slidesPerView: 'auto',
+
       setWrapperSize: true,
 
       navigation: {
