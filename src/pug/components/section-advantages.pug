@@ -7,46 +7,32 @@ mixin section-advantages({ className })
       let advantages = [
         {
           id: "1",
-          type: "image",
-          img: "/img/advantages-01@1x.jpg"
+          type: "text",
+          img: "/img/advantages-01@1x.jpg",
+          title: "Wide range of affordable vehicles",
+          text: "Get the perfect car for your needs",
+          order: 'right'
         },
         {
           id: "2",
           type: "text",
-          title: "Wide range of affordable vehicles",
-          text: "Get the perfect car for your needs"
+          img: "/img/advantages-02@1x.jpg",
+          title: "Better prices and exclusive offers",
+          text: "Save big with RentEco’s special deals",
+          order: 'right'
         },
         {
           id: "3",
-          type: "image",
-          img: "/img/advantages-02@1x.jpg"
-        },
-        {
-          id: "4",
           type: "text",
-          title: "Better prices and exclusive offers",
-          text: "Save big with RentEco’s special deals"
-        },
-        {
-          id: "5",
-          type: "image",
-          img: "/img/advantages-03@1x.jpg"
-        },
-        {
-          id: "6",
-          type: "text",
+          img: "/img/advantages-03@1x.jpg",
           title: "Simple booking process",
           text: "Enjoy a convenient and user-friendly booking platform",
         },
         {
-          id: "7",
-          type: "image",
+          id: "4",
+          type: "button",
           img: "/img/advantages-04@1x.jpg"
-        },
-        {
-          id: "8",
-          type: "button"
-        },
+        }
       ]
     .section-advantages__grid
       each it in advantages

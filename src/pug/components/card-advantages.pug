@@ -1,13 +1,13 @@
 include ../elements/images
 
-mixin card-advantages({ type, title, text, img })
-  article.card-advantages(class=type && `card-advantages--${type}`)
-    if img
-      .card-advantages__img
-        +picture2x({ image: img, width: 320, height: 247 })
-    if title
-      .card-advantages__title=title
-    if text
-      .card-advantages__text=text
+mixin card-advantages({ type, title, text, img, order })
+  article.card-advantages(class=order)
+    .card-advantages__photo
+      +picture2x({ image: img, width: 320, height: 247 })
+    if type === "text"
+      .card-advantages__content
+        .card-advantages__title=title
+        .card-advantages__text=text
     if type === "button"
-      button.card-advantages__btn Submit a request
+      .card-advantages__btn-wrp
+        button.card-advantages__btn Submit a request

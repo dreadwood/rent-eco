@@ -37,8 +37,8 @@
   @include breakpoint-lg {
     margin-top: 24px;
   }
-  @include breakpoint-xl {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-top: 32px;
-  }
+  // @include breakpoint-xl {
+  //   grid-template-columns: repeat(4, minmax(0, 1fr));
+  //   margin-top: 32px;
+  // }
 }
