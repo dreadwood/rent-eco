@@ -1,6 +1,6 @@
 include ../elements/images
 
-mixin field-file({ name, label, className })
+mixin field-file({ name, label, photo, className })
   .field-file(class=className)
     div
       .field-file__label=label
@@ -14,4 +14,4 @@ mixin field-file({ name, label, className })
     div
       .field-file__example-label Example
       .field-file__example
-        +picture({ image: "/img/license-front.jpg", width: 90, height: 57 })
+        +picture({ image: photo, width: 90, height: 57 })

@@ -65,8 +65,16 @@ mixin modal-book({ className })
               input.modal-book__field(id=it.id name=it.name value=it.value placeholder=it.placeholder)
         fieldset.modal-book__files
           legend.modal-book__files-label Driver’s License
-          +field-file({ name: "license_photo_front", label: "Front side" })
-          +field-file({ name: "license_photo_back", label: "Back side" })
+          +field-file({
+            name: "license_photo_front",
+            label: "Front side",
+            photo: "/img/license-front.jpg"
+          })
+          +field-file({
+            name: "license_photo_back",
+            label: "Back side",
+            photo: "/img/license-back.jpg"
+          })
         fieldset.modal-book__group
           each it in modalFields.slice(4, 7)
             .modal-book__el
