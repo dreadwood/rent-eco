@@ -23,6 +23,7 @@ mixin header({ className })
           a.header__socials-link.js-header-social(
             href=it.href
             rel="noreferrer nofollow"
+            target="_blank"
             aril-label=it.label
           )
             +svg({ name: it.icon, width: 40, height: 40 })
