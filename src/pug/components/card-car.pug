@@ -8,7 +8,7 @@ mixin card-car({ name, img, priceDay, priceWeek, equipment })
       h3.card-car__name=name
       .card-car__price
         .card-car__price-item #[span $#{priceDay}]/day
-        .card-car__price-item #[span $#{priceWeek}]/day
+        .card-car__price-item #[span $#{priceWeek}]/week
       .card-car__equipment
         each it in equipment
           .card-car__equipment-item
