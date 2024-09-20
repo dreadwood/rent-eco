@@ -13,7 +13,7 @@ mixin modal-book({ className })
         },
         {
           label: "Last Name*",
-          placeholder: "Enter driver’s first name",
+          placeholder: "Enter driver’s last name",
           type: "text",
           name: "last_name",
           id: "book_last_name"
@@ -40,13 +40,6 @@ mixin modal-book({ className })
           id: "book_license"
         },
         {
-          label: "License number*",
-          placeholder: "Enter driver’s license number",
-          type: "text",
-          name: "license",
-          id: "book_license"
-        },
-        {
           label: "Address*",
           placeholder: "Enter driver’s address",
           type: "text",
@@ -56,7 +49,7 @@ mixin modal-book({ className })
         {
           label: "Email*",
           placeholder: "Enter driver’s email",
-          type: "text",
+          type: "email",
           name: "email",
           id: "book_license"
         },
@@ -67,8 +60,8 @@ mixin modal-book({ className })
       form.modal-book__form.js-modal-book-form(method="post" action="https://webhook.site/a8cba197-e1d8-474c-a6ee-774f6994b29a")
         fieldset.modal-book__group
           each it in modalFields.slice(0, 4)
-            .modal-book__el 
-              label.modal-book__label(for=it.id)=it.label 
+            .modal-book__el
+              label.modal-book__label(for=it.id)=it.label
               input.modal-book__field(id=it.id name=it.name value=it.value placeholder=it.placeholder)
         fieldset.modal-book__files
           legend.modal-book__files-label Driver’s License
@@ -76,8 +69,8 @@ mixin modal-book({ className })
           +field-file({ name: "license_photo_back", label: "Back side" })
         fieldset.modal-book__group
           each it in modalFields.slice(4, 7)
-            .modal-book__el 
-              label.modal-book__label(for=it.id)=it.label 
+            .modal-book__el
+              label.modal-book__label(for=it.id)=it.label
               input.modal-book__field(id=it.id name=it.name value=it.value placeholder=it.placeholder)
         .modal-book__controls
           button.modal-book__btn.ghost.js-modal-book-close(type="button") Cancel
