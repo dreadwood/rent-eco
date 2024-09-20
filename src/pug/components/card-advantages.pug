@@ -9,5 +9,6 @@ mixin card-advantages({ type, title, text, img, order })
         .card-advantages__title=title
         .card-advantages__text=text
     if type === "button"
+      include ../mocks/menu-links
       .card-advantages__btn-wrp
-        button.card-advantages__btn Submit a request
+        a.card-advantages__btn(href=`#${menuLinks[3].id}`) Submit a request
