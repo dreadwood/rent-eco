@@ -37,5 +37,15 @@
     "stylelint-order": "6.0.4",
     "stylelint-prettier": "5.0.2",
     "uglify-js": "3.17.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "cwebp-bin",
+      "es5-ext",
+      "fsevents",
+      "gifsicle",
+      "mozjpeg",
+      "optipng-bin"
+    ]
   }
 }
